@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'machixeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.path.join(BASE_DIR, 'machix_dev'),
+        'NAME': 'machix_dev',
         'USER': 'andre',
         'PASSWORD': '',
         'HOST': 'localhost',
