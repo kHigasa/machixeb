@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'reports.apps.ReportsConfig',
+    'shifts.apps.ShiftsConfig',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +85,7 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': 5432,
+        'ATOMIC_REQUESTS': True,
     }
 }
 
