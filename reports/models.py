@@ -22,6 +22,3 @@ class Report(models.Model):
     todo = models.TextField(verbose_name='次やること')
     review = models.TextField(verbose_name='フリー記述欄（振り返りや感想）')
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='ユーザー', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.username

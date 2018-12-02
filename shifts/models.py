@@ -2,6 +2,7 @@ import datetime
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 from config import settings
 
 
@@ -26,6 +27,3 @@ class Shift(models.Model):
     opening_time = models.TimeField(verbose_name='開始時間', default=datetime.time(11, 0, 0))
     closing_time = models.TimeField(verbose_name='終了時間', default=datetime.time(19, 0, 0))
     user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='ユーザー', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.username
