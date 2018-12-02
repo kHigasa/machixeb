@@ -1,4 +1,5 @@
 import datetime
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -18,6 +19,7 @@ class Report(models.Model):
     done = models.TextField(verbose_name='やったこと')
     todo = models.TextField(verbose_name='次やること')
     review = models.TextField(verbose_name='フリー記述欄（振り返りや感想）')
+    user = models.ForeignKey(User, verbose_name='ユーザー', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.feeling
+        return self.user.username
